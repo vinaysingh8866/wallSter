@@ -5,7 +5,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#EDEDED"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"><![CDATA[
+
+    ... />
+
+    ]]>
+
 
     <TextView
         android:id="@+id/textView"
@@ -209,5 +214,71 @@
         app:layout_constraintVertical_bias="0.129">
 
     </Button>
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="185dp"
+        android:layout_height="44dp"
+
+
+        android:text="More options"
+        tools:layout_editor_absoluteX="5dp"
+        tools:layout_editor_absoluteY="592dp">
+
+    </Button>
+
+    <Button
+        android:layout_width="215dp"
+        android:layout_height="42dp"
+
+        android:text="More options"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/button2"
+        tools:layout_editor_absoluteY="596dp" >
+
+    </Button>
+
+    <Button
+        android:layout_width="205dp"
+        android:layout_height="43dp"
+
+        android:text="More options"
+        tools:layout_editor_absoluteX="197dp"
+        tools:layout_editor_absoluteY="549dp">
+
+    </Button>
+
+    <Button
+        android:layout_width="184dp"
+        android:layout_height="45dp"
+
+        android:text="Anime"
+        tools:layout_editor_absoluteX="5dp"
+        tools:layout_editor_absoluteY="547dp">
+
+    </Button>
+
+    <Button
+        android:layout_width="184dp"
+        android:layout_height="45dp"
+        android:backgroundTint="#0E0E0E"
+
+        android:text="Cars"
+        tools:layout_editor_absoluteX="5dp"
+        tools:layout_editor_absoluteY="502dp">
+
+    </Button>
+
+    <Button
+        android:layout_width="201dp"
+        android:layout_height="45dp"
+
+        android:text="Planes"
+        tools:layout_editor_absoluteX="199dp"
+        tools:layout_editor_absoluteY="502dp">
+
+    </Button>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
