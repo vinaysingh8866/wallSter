@@ -307,5 +307,13 @@
         tools:layout_editor_absoluteX="18dp"
         tools:layout_editor_absoluteY="241dp" />
 
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="186dp"
+        android:layout_height="180dp"
+        app:srcCompat="@drawable/flower"
+        tools:layout_editor_absoluteX="213dp"
+        tools:layout_editor_absoluteY="241dp" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
