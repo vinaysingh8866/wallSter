@@ -214,8 +214,7 @@
         android:id="@+id/button2"
         android:layout_width="185dp"
         android:layout_height="44dp"
-
-
+        android:backgroundTint="#0E0E0E"
         android:text="More options"
         tools:layout_editor_absoluteX="5dp"
         tools:layout_editor_absoluteY="592dp">
@@ -225,8 +224,8 @@
     <Button
         android:layout_width="215dp"
         android:layout_height="42dp"
-
         android:text="More options"
+        android:backgroundTint="#0E0E0E"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/button2"
@@ -237,6 +236,7 @@
     <Button
         android:layout_width="205dp"
         android:layout_height="43dp"
+        android:backgroundTint="#0E0E0E"
 
         android:text="More options"
         tools:layout_editor_absoluteX="197dp"
@@ -247,6 +247,7 @@
     <Button
         android:layout_width="184dp"
         android:layout_height="45dp"
+        android:backgroundTint="#0E0E0E"
 
         android:text="Anime"
         tools:layout_editor_absoluteX="5dp"
@@ -268,7 +269,7 @@
     <Button
         android:layout_width="201dp"
         android:layout_height="45dp"
-
+        android:backgroundTint="#0E0E0E"
         android:text="Planes"
         tools:layout_editor_absoluteX="199dp"
         tools:layout_editor_absoluteY="502dp">
