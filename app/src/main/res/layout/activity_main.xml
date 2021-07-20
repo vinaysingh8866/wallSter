@@ -281,21 +281,12 @@
     </Button>
 
     <ImageButton
-        android:id="@+id/homeButton"
+        android:id="@+id/imageButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="@color/design_default_color_background"
         app:srcCompat="@drawable/ic_icons8_home"
         tools:layout_editor_absoluteX="92dp"
-        tools:layout_editor_absoluteY="662dp" />
-
-    <ImageButton
-        android:id="@+id/favoriteButton"
-        android:layout_width="60dp"
-        android:layout_height="47dp"
-        android:backgroundTint="@color/design_default_color_background"
-        app:srcCompat="@drawable/ic_favorite"
-        tools:layout_editor_absoluteX="271dp"
         tools:layout_editor_absoluteY="662dp" />
 
 
