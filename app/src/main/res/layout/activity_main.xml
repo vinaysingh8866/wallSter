@@ -301,11 +301,19 @@
 
     <ImageView
         android:id="@+id/imageView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="165dp"
+        android:layout_height="175dp"
         app:srcCompat="@drawable/bird"
-        tools:layout_editor_absoluteX="40dp"
-        tools:layout_editor_absoluteY="261dp" />
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="235dp" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="188dp"
+        android:layout_height="170dp"
+        app:srcCompat="@drawable/flower"
+        tools:layout_editor_absoluteX="213dp"
+        tools:layout_editor_absoluteY="235dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
