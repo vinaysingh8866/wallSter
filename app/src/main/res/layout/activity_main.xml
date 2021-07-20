@@ -5,13 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#EDEDED"
-    tools:context=".MainActivity"><![CDATA[
-
-    ... />
-
-    ]]>
-
-
+    tools:context=".MainActivity">
+    
     <TextView
         android:id="@+id/textView"
         android:layout_width="152dp"
@@ -280,6 +275,23 @@
         tools:layout_editor_absoluteY="502dp">
 
     </Button>
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/design_default_color_background"
+        app:srcCompat="@drawable/ic_icons8_home"
+        tools:layout_editor_absoluteX="92dp"
+        tools:layout_editor_absoluteY="662dp" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button"
+        tools:layout_editor_absoluteX="150dp"
+        tools:layout_editor_absoluteY="270dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
