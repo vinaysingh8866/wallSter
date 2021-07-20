@@ -316,12 +316,12 @@
         tools:layout_editor_absoluteY="241dp" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/Birds"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="178dp"
-        tools:layout_editor_absoluteY="453dp" />
+        android:text="Birds"
+        tools:layout_editor_absoluteX="18dp"
+        tools:layout_editor_absoluteY="402dp" />
 
     <TextView
         android:id="@+id/textView4"
