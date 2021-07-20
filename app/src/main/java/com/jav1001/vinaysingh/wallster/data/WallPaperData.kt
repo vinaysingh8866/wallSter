@@ -8,7 +8,7 @@ class WallPaperData {
 
     data class WallpaperSearch(
         @Json(name = "data")
-        val results://
+        val results: WallPaperInfo//
     )
 
 
@@ -16,20 +16,20 @@ class WallPaperData {
         val id: Int,
         val url: String,
         val short_url: Int,
-        views Int
-        favorites Int,
-        source,
-        purity,
-        category,
-        dimension_x Int,
-        dimension_y Int,
-        resolution,
-        ratio,
-        file_size Int,
-        file_type,
-        created_at,
+        val views: Int,
+        val favorites: Int,
+        val source: Int,
+        val purity: Int,
+        val category: String,
+        val dimension_x: Int,
+        val dimension_y: Int,
+        val resolution: String,
+        val ratio: String,
+        val file_size: String,
+        val file_type: String,
+        val created_at: String,
         val colors : List<String>,
-        path:,
+        val path: String,
 
     )
 
