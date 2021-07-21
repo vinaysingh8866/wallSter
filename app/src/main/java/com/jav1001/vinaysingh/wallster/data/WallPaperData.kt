@@ -6,13 +6,12 @@ import com.squareup.moshi.JsonClass
 
 @JsonClass(generateAdapter = true)
 
-data class WallpaperSearch(
+data class WallpaperList(
     @Json(name = "data")
-    val results: List<WallPaperInfo>//
+    val results: List<WallPaperInfo>
 )
 
 @JsonClass(generateAdapter = true)
-
 data class WallPaperInfo(
     val id: Int,
     val url: String,
@@ -31,7 +30,6 @@ data class WallPaperInfo(
     val created_at: String,
     val colors : List<String>,
     val path: String,
-
 )
 
 
