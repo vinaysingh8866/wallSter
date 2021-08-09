@@ -13,13 +13,13 @@ data class WallpaperList(
 
 @JsonClass(generateAdapter = true)
 data class WallPaperInfo(
-    val id: Int,
+    val id: String,
     val url: String,
-    val short_url: Int,
+    val short_url: String,
     val views: Int,
     val favorites: Int,
-    val source: Int,
-    val purity: Int,
+    val source: String,
+    val purity: String,
     val category: String,
     val dimension_x: Int,
     val dimension_y: Int,

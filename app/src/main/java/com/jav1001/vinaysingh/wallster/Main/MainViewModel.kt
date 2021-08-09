@@ -12,21 +12,23 @@ class MainViewModel (
     ) : ViewModel() {
 
     val wallPapers = repository.wallpaperInfos
-    private val _navigateToDetails = MutableLiveData<WallPaperInfo>()
-    val navigateToDetails: LiveData<WallPaperInfo?> get() = _navigateToDetails
+    //private val _navigateToDetails = MutableLiveData<WallPaperInfo>()
+    //val navigateToDetails: LiveData<WallPaperInfo?> get() = _navigateToDetails
 
     init {
         viewModelScope.launch {
             repository.loadWallpaper()
-            Log.d("wallaperApi Return",repository.wallpaperInfos.toString())
-
+            //Log.d("wallaperApi Return",repository.wallpaperInfos.toString())
         }
 
     }
+
 }
+
+
 class MainViewModelFactory(private val repository: MainRepository): ViewModelProvider.Factory {
 
-    @Suppress("UNCHECKED_CAST")
+
     override fun <T : ViewModel?> create(modelClass: Class<T>): T {
         if (modelClass.isAssignableFrom(MainViewModel::class.java)) {
             return MainViewModel(repository) as T
