@@ -9,6 +9,7 @@ import com.jav1001.vinaysingh.wallster.Main.MainViewModel
 import com.jav1001.vinaysingh.wallster.Main.MainViewModelFactory
 
 import com.jav1001.vinaysingh.wallster.data.MainRepository
+import com.jav1001.vinaysingh.wallster.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 
@@ -18,12 +19,18 @@ class MainActivity : AppCompatActivity() {
         MainViewModelFactory(repository)
     }
 
+    private lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
         viewModel.wallPapers.observe(this){
-            Log.d("test12",viewModel.wallPapers.value.toString())
+
         }
     }
 }
