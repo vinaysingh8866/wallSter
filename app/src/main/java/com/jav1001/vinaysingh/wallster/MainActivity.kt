@@ -9,12 +9,14 @@ import com.jav1001.vinaysingh.wallster.Main.MainViewModel
 import com.jav1001.vinaysingh.wallster.Main.MainViewModelFactory
 
 import com.jav1001.vinaysingh.wallster.data.MainRepository
+import com.jav1001.vinaysingh.wallster.data.database.WallpaperDatabase
 
 class MainActivity : AppCompatActivity() {
 
     private val viewModel by viewModels<MainViewModel> {
         val apiService = (application as WallPaperApplication).serviceLocator.apiService
-        val repository = MainRepository(apiService)
+        val database =(application as WallPaperApplication).serviceLocator.WallpaperDatabase
+        val repository = MainRepository(apiService,database)
         MainViewModelFactory(repository)
     }
 

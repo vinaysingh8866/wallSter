@@ -3,11 +3,15 @@ package com.jav1001.vinaysingh.wallster.data
 import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.map
 import com.jav1001.vinaysingh.wallster.ApiService
+import com.jav1001.vinaysingh.wallster.data.database.WallpaperDatabase
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.withContext
 import retrofit2.HttpException
 import java.io.IOException
 
-class MainRepository(private val apiService: ApiService)  {
+class MainRepository(private val apiService: ApiService, private val wallpaperDatabase: WallpaperDatabase)  {
 
     private val _wallpaperInfos = MutableLiveData<List<WallPaperInfo>>()
     val wallpaperInfos: LiveData<List<WallPaperInfo>> get() = _wallpaperInfos
@@ -27,7 +31,9 @@ class MainRepository(private val apiService: ApiService)  {
         }
         result?.let {
             _wallpaperInfos.value = it.results
-            Log.d("test123",wallpaperInfos.toString())
+            withContext(Dispatchers.IO){
+                wallpaperDatabase.getWallpaperDao().insertAll (it.results.map { it.toLocal() })
+            }
         }
     }
 
