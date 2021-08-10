@@ -20,10 +20,16 @@ class MainActivity : AppCompatActivity() {
         MainViewModelFactory(repository)
     }
 
+    private lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
         viewModel.wallPapers.observe(this){
             Log.d("test12",viewModel.wallPapers.value.toString())
         }
