@@ -6,7 +6,7 @@ import com.jav1001.vinaysingh.wallster.data.WallPaperInfo
 
 @Entity(tableName = "local_data")
 class LocalData (
-    @PrimaryKey
+        @PrimaryKey
         val id: String,
         val url: String,
         val short_url: String,
