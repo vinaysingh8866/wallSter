@@ -44,7 +44,6 @@ class LocalData (
                 file_type,
                 created_at,
                 path
-
             )
         }
     }
