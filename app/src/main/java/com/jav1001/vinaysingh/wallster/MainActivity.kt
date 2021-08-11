@@ -10,6 +10,7 @@ import com.jav1001.vinaysingh.wallster.Main.MainViewModelFactory
 
 import com.jav1001.vinaysingh.wallster.data.MainRepository
 import com.jav1001.vinaysingh.wallster.data.database.WallpaperDatabase
+import com.jav1001.vinaysingh.wallster.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 

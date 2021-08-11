@@ -30,6 +30,7 @@ data class WallPaperInfo(
     val created_at: String,
 
     val path: String,
+    var isfaved:Boolean=false
 
 
 ){
