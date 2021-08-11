@@ -17,7 +17,7 @@ class MainViewModel (
 
     init {
         viewModelScope.launch {
-
+            repository.loadWallpaper()
             //Log.d("wallaperApi Return",repository.wallpaperInfos.toString())
         }
 

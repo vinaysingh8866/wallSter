@@ -1,5 +1,6 @@
 package com.jav1001.vinaysingh.wallster
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -11,6 +12,7 @@ import com.jav1001.vinaysingh.wallster.Main.MainViewModelFactory
 import com.jav1001.vinaysingh.wallster.data.MainRepository
 import com.jav1001.vinaysingh.wallster.data.database.WallpaperDatabase
 import com.jav1001.vinaysingh.wallster.databinding.ActivityMainBinding
+import com.jav1001.vinaysingh.wallster.ui.ListActivity
 
 class MainActivity : AppCompatActivity() {
 
@@ -34,5 +36,14 @@ class MainActivity : AppCompatActivity() {
         viewModel.wallPapers.observe(this){
             Log.d("test12",viewModel.wallPapers.value.toString())
         }
+
+        binding.buttonPenguin.setOnClickListener {
+            val intent = Intent(this,  ListActivity::class.java).apply {
+
+            }
+            startActivity(intent)
+        }
+
+
     }
 }

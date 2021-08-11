@@ -23,7 +23,7 @@ class LocalData (
         val file_type: String,
         val created_at: String,
         val path: String,
-    val isfaved:Boolean=false
+        val isfaved:Boolean=false
     )
     {
         fun toDamain(): WallPaperInfo
@@ -44,9 +44,7 @@ class LocalData (
                 file_size,
                 file_type,
                 created_at,
-                path,
-                isfaved
-
+                path
             )
         }
     }
