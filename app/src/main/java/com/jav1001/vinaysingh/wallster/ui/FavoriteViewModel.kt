@@ -39,10 +39,9 @@ class FavoriteViewModelFactory(private val repository: MainRepository): ViewMode
 
 
     override fun <T : ViewModel?> create(modelClass: Class<T>): T {
-        if (modelClass.isAssignableFrom(MainViewModel::class.java)) {
+        if (modelClass.isAssignableFrom(FavoriteViewModel::class.java)) {
             return FavoriteViewModel(repository) as T
         }
-
         throw IllegalArgumentException("Invalid View Model")
     }
 }

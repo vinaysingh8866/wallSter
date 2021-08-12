@@ -32,8 +32,6 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        supportActionBar?.setDisplayHomeAsUpEnabled(true)
-
         viewModel.wallPapers.observe(this){
             Log.d("test12",viewModel.wallPapers.value.toString())
         }
@@ -46,7 +44,7 @@ class MainActivity : AppCompatActivity() {
         }
 
 
-        binding.buttonDog.setOnClickListener {
+        binding.favoriteButton.setOnClickListener {
             val intent = Intent(this,  FavoriteActivity::class.java).apply {
 
             }

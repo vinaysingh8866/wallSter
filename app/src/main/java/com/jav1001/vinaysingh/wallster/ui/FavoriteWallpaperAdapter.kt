@@ -38,7 +38,7 @@ class FavWallpaperHolder  private constructor(itemView: View): RecyclerView.View
 
     private val image = itemView.findViewById<ImageView>(R.id.fave_icon)
     fun bind(wallPaperInfo: WallPaperInfo, OnfavWallpaperClickListner: OnFavWallpaperClickListner) {
-        image.setImageResource(R.drawable.beach)
+        //image.setImageResource(R.drawable.beach)
         itemView.setOnClickListener {
             OnfavWallpaperClickListner.onFavClick(wallPaperInfo)
         }
