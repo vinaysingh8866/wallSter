@@ -13,8 +13,22 @@ import java.io.IOException
 
 class MainRepository(private val apiService: ApiService, private val wallpaperDatabase: WallpaperDatabase)  {
 
+
+
     private val _wallpaperInfos = MutableLiveData<List<WallPaperInfo>>()
     val wallpaperInfos: LiveData<List<WallPaperInfo>> get() = _wallpaperInfos
+
+    val wallpapers : LiveData<List<WallPaperInfo>> = wallpaperDatabase.getWallpaperDao().getWallpaper().map {
+        it.map {
+            localData -> localData.toDamain()
+        }
+    }
+
+    val favWallpaper:LiveData<List<WallPaperInfo>> = wallpaperDatabase.getWallpaperDao().getFavWallpaper().map {
+        it.map { localData -> localData.toDamain() }
+    }
+
+
 
     suspend fun loadWallpaper() {
         val result: WallpaperList? = try {
