@@ -2,6 +2,9 @@ package com.jav1001.vinaysingh.wallster.ui
 
 import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
+import android.widget.EditText
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -32,11 +35,34 @@ class ListActivity : AppCompatActivity() {
 
 
 
+
         findViewById<RecyclerView>(R.id.recyclerViewWallpapers).also {
             it.layoutManager = LinearLayoutManager(this)
             it.adapter = adapter
         }
 
+        findViewById<Button>(R.id.buttonSearch).setOnClickListener {
+
+            lifecycleScope.launch{
+                val apiService = (application as WallPaperApplication).serviceLocator.apiService
+                val response = try {
+                    apiService.getWallpaper(queryKey = findViewById<TextView>(R.id.searchText).text.toString())
+
+                }catch (e: HttpException) {
+                    null
+                } catch (e: IOException) {
+                    null
+                } catch (e: Exception) {
+                    null
+                }
+                response?.let {
+                    adapter.wallpapers = it.results
+                    adapter.notifyDataSetChanged()
+                }
+
+            }
+
+        }
         lifecycleScope.launch{
             val apiService = (application as WallPaperApplication).serviceLocator.apiService
             val response = try {

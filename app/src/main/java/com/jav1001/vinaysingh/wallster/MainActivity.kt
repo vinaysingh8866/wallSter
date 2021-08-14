@@ -61,7 +61,7 @@ class MainActivity : AppCompatActivity() {
             intent.putExtra("name", "Dog");
             startActivity(intent)
         }
-        binding.buttonAnime.setOnClickListener {
+        binding.button2.setOnClickListener {
             val intent = Intent(this,  ListActivity::class.java).apply {
 
             }
