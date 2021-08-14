@@ -45,7 +45,8 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        binding.Birds.setOnClickListener {
+
+        binding.buttonCats.setOnClickListener {
             val intent = Intent(this,  ListActivity::class.java).apply {
 
             }
