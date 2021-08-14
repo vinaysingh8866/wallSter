@@ -33,6 +33,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         viewModel.wallPapers.observe(this){
+
             Log.d("test12",viewModel.wallPapers.value.toString())
         }
 

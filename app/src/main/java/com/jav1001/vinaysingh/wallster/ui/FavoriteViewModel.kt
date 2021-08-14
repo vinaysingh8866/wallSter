@@ -13,7 +13,7 @@ import kotlinx.coroutines.launch
 import java.lang.IllegalArgumentException
 
 class FavoriteViewModel(private val repository: MainRepository):ViewModel() {
-    val wallPapers:LiveData<List<WallPaperInfo>> = repository.favWallpaper
+    val wallPapers:LiveData<List<WallPaperInfo>> = repository.wallpaperInfos
 
     //private val _navigateToDetails = MutableLiveData<WallPaperInfo>()
     //val navigateToDetails: LiveData<WallPaperInfo?> get() = _navigateToDetails

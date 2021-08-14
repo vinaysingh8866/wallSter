@@ -5,7 +5,7 @@ import retrofit2.http.Path
 import retrofit2.http.Query
 
 interface ApiService {
-    @GET("search?q=dogs")
+    @GET("search")
     suspend fun getWallpaper(@Query("q") queryKey: String = "",
                              @Query("categories") categories: String = "111"):WallpaperList
 //https://wallhaven.cc/api/v1/search?q=vape

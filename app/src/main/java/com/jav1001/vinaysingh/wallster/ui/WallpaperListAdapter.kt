@@ -1,11 +1,13 @@
 package com.jav1001.vinaysingh.wallster.ui
 
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.jav1001.vinaysingh.wallster.R
 import com.jav1001.vinaysingh.wallster.data.WallPaperInfo
 
@@ -37,12 +39,16 @@ class WallpaperListViewHolder private constructor(itemview: View): RecyclerView.
     }
 
     private val image1 = itemview.findViewById<ImageView>(R.id.imageViewR1)
-    private val image2 = itemview.findViewById<ImageView>(R.id.imageViewR2)
-
+    //private val image2 = itemview.findViewById<ImageView>(R.id.imageViewR2)
+    private val textTest = itemview.findViewById<TextView>(R.id.textTest)
 
     fun bind(wallpaper: WallPaperInfo, onWallpaperClickListner: OnWallpaperClickListner ){
-        image1.setImageResource(R.drawable.bird)
-        image2.setImageResource(R.drawable.flower)
+        Glide.with(itemView).load(wallpaper.thumbs.small).centerInside().into(image1)
+
+        //image1.setImageResource(R.drawable.bird)
+        //image2.setImageResource(R.drawable.flower)
+        //Log.d("",wallpaper.path)
+        textTest.text = wallpaper.id
         itemView.setOnClickListener{
             onWallpaperClickListner.onWallpaperClick(wallpaper)
         }

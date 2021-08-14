@@ -2,6 +2,7 @@ package com.jav1001.vinaysingh.wallster.data.database
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
+import com.jav1001.vinaysingh.wallster.data.Thumbs
 import com.jav1001.vinaysingh.wallster.data.WallPaperInfo
 
 @Entity(tableName = "local_data")
@@ -23,11 +24,15 @@ class LocalData (
         val file_type: String,
         val created_at: String,
         val path: String,
+        val thumbs:String,
         val isfaved:Boolean=false
+
+
     )
     {
         fun toDamain(): WallPaperInfo
         {
+            val strs = thumbs.split("#").toTypedArray()
             return WallPaperInfo(
                id,
                 url,
@@ -44,7 +49,8 @@ class LocalData (
                 file_size,
                 file_type,
                 created_at,
-                path
+                path,
+                Thumbs(strs[0],strs[1],strs[2])
             )
         }
     }

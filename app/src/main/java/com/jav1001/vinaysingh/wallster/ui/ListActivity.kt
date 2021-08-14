@@ -18,6 +18,7 @@ class ListActivity : AppCompatActivity() {
         val adapter = WallpaperListAdapter(OnWallpaperClickListner {
         })
 
+
         findViewById<RecyclerView>(R.id.recyclerViewWallpapers).also {
             it.layoutManager = LinearLayoutManager(this)
             it.adapter = adapter
@@ -26,7 +27,7 @@ class ListActivity : AppCompatActivity() {
         lifecycleScope.launch{
             val apiService = (application as WallPaperApplication).serviceLocator.apiService
             val response = try {
-                apiService.getWallpaper()
+                apiService.getWallpaper(queryKey = "Mountain")
 
             }catch (e: HttpException) {
                 null

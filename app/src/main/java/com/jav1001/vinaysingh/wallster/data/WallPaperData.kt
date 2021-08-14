@@ -12,6 +12,10 @@ data class WallpaperList(
     val results: List<WallPaperInfo>
 )
 
+data class Thumbs(val large: String="", val orignal:String="", val small:String="")
+
+
+
 @JsonClass(generateAdapter = true)
 data class WallPaperInfo(
     val id: String,
@@ -30,6 +34,7 @@ data class WallPaperInfo(
     val file_type: String,
     val created_at: String,
     val path: String,
+    val thumbs:Thumbs
 ){
     fun toLocal() :LocalData {
         return LocalData(
@@ -48,7 +53,8 @@ data class WallPaperInfo(
             file_size,
             file_type,
             created_at,
-            path
+            path,
+            (thumbs.large+"#"+thumbs.orignal+"#"+thumbs.small)
         )
     }
 }
