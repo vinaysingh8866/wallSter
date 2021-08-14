@@ -22,6 +22,9 @@ class ListActivity : AppCompatActivity() {
 
             }
             intent.putExtra("url", it.path);
+            intent.putExtra("res", it.resolution);
+            intent.putExtra("type",it.file_type)
+           
             startActivity(intent)
         })
 
