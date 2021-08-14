@@ -41,6 +41,15 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this,  ListActivity::class.java).apply {
 
             }
+            intent.putExtra("name", "Penguin");
+            startActivity(intent)
+        }
+
+        binding.Birds.setOnClickListener {
+            val intent = Intent(this,  ListActivity::class.java).apply {
+
+            }
+            intent.putExtra("name", "bird");
             startActivity(intent)
         }
 

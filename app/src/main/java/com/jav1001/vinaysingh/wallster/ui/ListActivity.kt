@@ -1,7 +1,7 @@
 package com.jav1001.vinaysingh.wallster.ui
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -11,12 +11,15 @@ import kotlinx.coroutines.launch
 import retrofit2.HttpException
 import java.io.IOException
 
+
 class ListActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_list)
         val adapter = WallpaperListAdapter(OnWallpaperClickListner {
         })
+
+
 
 
         findViewById<RecyclerView>(R.id.recyclerViewWallpapers).also {
@@ -27,7 +30,7 @@ class ListActivity : AppCompatActivity() {
         lifecycleScope.launch{
             val apiService = (application as WallPaperApplication).serviceLocator.apiService
             val response = try {
-                apiService.getWallpaper(queryKey = "Mountain")
+                apiService.getWallpaper(queryKey = intent.getStringExtra("name").toString())
 
             }catch (e: HttpException) {
                 null
