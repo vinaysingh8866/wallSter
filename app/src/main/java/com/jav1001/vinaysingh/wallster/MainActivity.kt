@@ -12,7 +12,7 @@ import com.jav1001.vinaysingh.wallster.Main.MainViewModelFactory
 import com.jav1001.vinaysingh.wallster.data.MainRepository
 import com.jav1001.vinaysingh.wallster.data.database.WallpaperDatabase
 import com.jav1001.vinaysingh.wallster.databinding.ActivityMainBinding
-import com.jav1001.vinaysingh.wallster.ui.FavoriteActivity
+
 import com.jav1001.vinaysingh.wallster.ui.ListActivity
 
 class MainActivity : AppCompatActivity() {
@@ -61,7 +61,7 @@ class MainActivity : AppCompatActivity() {
             intent.putExtra("name", "Dog");
             startActivity(intent)
         }
-        binding.button2.setOnClickListener {
+        binding.buttonAnime.setOnClickListener {
             val intent = Intent(this,  ListActivity::class.java).apply {
 
             }
@@ -145,14 +145,21 @@ class MainActivity : AppCompatActivity() {
             intent.putExtra("name", "Lion");
             startActivity(intent)
         }
-
-
-        binding.favoriteButton.setOnClickListener {
-            val intent = Intent(this,  FavoriteActivity::class.java).apply {
+        binding.searchImageView.setOnClickListener {
+            val intent = Intent(this,  ListActivity::class.java).apply {
 
             }
+
             startActivity(intent)
         }
+
+
+//        binding.favoriteButton.setOnClickListener {
+//            val intent = Intent(this,  FavoriteActivity::class.java).apply {
+//
+//            }
+//            startActivity(intent)
+//        }
 
 
 
