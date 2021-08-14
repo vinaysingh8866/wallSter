@@ -43,8 +43,8 @@ class WallpaperListViewHolder private constructor(itemview: View): RecyclerView.
     private val textTest = itemview.findViewById<TextView>(R.id.textTest)
 
     fun bind(wallpaper: WallPaperInfo, onWallpaperClickListner: OnWallpaperClickListner ){
-        Glide.with(itemView).load(wallpaper.thumbs.small).centerInside().into(image1)
 
+        Glide.with(itemView).load(wallpaper.thumbs.small).centerInside().into(image1)
         //image1.setImageResource(R.drawable.bird)
         //image2.setImageResource(R.drawable.flower)
         //Log.d("",wallpaper.path)
