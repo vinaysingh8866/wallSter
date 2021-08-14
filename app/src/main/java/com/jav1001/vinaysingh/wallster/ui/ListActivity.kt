@@ -1,5 +1,6 @@
 package com.jav1001.vinaysingh.wallster.ui
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
@@ -17,6 +18,11 @@ class ListActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_list)
         val adapter = WallpaperListAdapter(OnWallpaperClickListner {
+            val intent = Intent(this,  DetailsActivity::class.java).apply {
+
+            }
+            intent.putExtra("url", it.path);
+            startActivity(intent)
         })
 
 
@@ -39,7 +45,6 @@ class ListActivity : AppCompatActivity() {
             } catch (e: Exception) {
                 null
             }
-
             response?.let {
                 adapter.wallpapers = it.results
                 adapter.notifyDataSetChanged()
