@@ -13,6 +13,7 @@ class DetailsActivity : AppCompatActivity() {
         val binding = ActivityDetailsBinding.inflate(layoutInflater)
         binding.textViewRes.text = intent.getStringExtra("res")
         binding.textViewType.text = intent.getStringExtra("type")
+        binding.textViewSource.text = intent.getStringExtra("source")
         setContentView(binding.root)
         Glide.with(this@DetailsActivity).load(intent.getStringExtra("url")).centerInside().into(binding.imageDetail)
         //binding.imageDetail.setImageResource(1)
