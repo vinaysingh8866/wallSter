@@ -12,85 +12,90 @@
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.021" />
+        app:layout_constraintVertical_bias="0.035" />
 
     <TextView
         android:id="@+id/textViewRes"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="84dp"
-        android:layout_marginEnd="130dp"
+        android:layout_width="134dp"
+        android:layout_height="43dp"
+        android:layout_marginEnd="104dp"
+        android:layout_marginBottom="7dp"
         android:text="TextView"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/textViewType"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageDetail"
-        app:layout_constraintVertical_bias="0.447" />
+        app:layout_constraintBottom_toBottomOf="@+id/editTextTextPersonName2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/editTextTextPersonName2" />
 
     <EditText
         android:id="@+id/editTextTextPersonName2"
-        android:layout_width="121dp"
-        android:layout_height="58dp"
-        android:layout_marginStart="43dp"
-        android:layout_marginEnd="15dp"
-        android:layout_marginBottom="24dp"
+        android:layout_width="109dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="16dp"
         android:ems="10"
+        android:fontFamily="sans-serif-medium"
         android:inputType="textPersonName"
         android:text="Resolution:"
-        app:layout_constraintBottom_toTopOf="@+id/textViewRes"
-        app:layout_constraintEnd_toStartOf="@+id/editTextTextPersonName3"
+        android:textColor="@color/purple_700"
+        android:textColorHighlight="@color/purple_500"
+        app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName3"
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
         android:id="@+id/editTextTextPersonName3"
-        android:layout_width="109dp"
-        android:layout_height="52dp"
-        android:layout_marginStart="15dp"
-        android:layout_marginEnd="43dp"
-        android:layout_marginBottom="24dp"
+        android:layout_width="122dp"
+        android:layout_height="57dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="20dp"
         android:ems="10"
+        android:fontFamily="sans-serif-medium"
         android:inputType="textPersonName"
         android:text="File Type"
-        app:layout_constraintBottom_toTopOf="@+id/textViewType"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/editTextTextPersonName2" />
+        android:textColor="@color/purple_700"
+        android:textColorHighlight="@color/purple_500"
+        app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName4"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/textViewType"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="84dp"
+        android:layout_width="129dp"
+        android:layout_height="42dp"
         android:text="TextView"
         app:layout_constraintEnd_toEndOf="parent"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteY="283dp" />
+        app:layout_constraintHorizontal_bias="0.27"
+        app:layout_constraintStart_toEndOf="@+id/editTextTextPersonName3"
+        app:layout_constraintTop_toTopOf="@+id/editTextTextPersonName3"
+        tools:ignore="MissingConstraints" />
 
     <EditText
         android:id="@+id/editTextTextPersonName4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="372dp"
+        android:layout_width="137dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginEnd="252dp"
+        android:layout_marginBottom="52dp"
         android:ems="10"
+        android:fontFamily="sans-serif-medium"
         android:inputType="textPersonName"
         android:text="Source"
+        android:textColor="@color/purple_700"
+        android:textColorHighlight="@color/purple_500"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.446"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageDetail"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/textViewSource"
         android:layout_width="129dp"
         android:layout_height="38dp"
+        android:layout_marginEnd="68dp"
         android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="@+id/editTextTextPersonName4"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.459"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName4" />
+        app:layout_constraintStart_toEndOf="@+id/editTextTextPersonName4"
+        app:layout_constraintTop_toTopOf="@+id/editTextTextPersonName4" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
