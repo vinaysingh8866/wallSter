@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFFFFF"
+    android:backgroundTint="#00F6F3F3"
     tools:context=".MainActivity">
 
     <TextView
@@ -247,13 +248,12 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="12dp"
 
+        android:background="@drawable/button_corner"
         android:text="Cars"
         android:textColor="#000000"
-        android:background="@drawable/button_corner"
         app:cornerRadius="16dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bird"
-        >
+        app:layout_constraintTop_toBottomOf="@+id/bird">
 
     </Button>
 
@@ -262,11 +262,11 @@
         android:layout_width="160dp"
         android:layout_height="47dp"
         android:layout_marginEnd="12dp"
+        android:background="@drawable/button_corner"
         android:backgroundTint="@color/white"
         android:text="Planes"
-        android:background="@drawable/button_corner"
-        app:cornerRadius="16dp"
         android:textColor="#000000"
+        app:cornerRadius="16dp"
         app:layout_constraintBottom_toBottomOf="@+id/buttonCars"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/buttonCars">
