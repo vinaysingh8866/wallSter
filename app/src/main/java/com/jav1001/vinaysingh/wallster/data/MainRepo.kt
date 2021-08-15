@@ -37,7 +37,7 @@ class MainRepository(private val apiService: ApiService, private val wallpaperDa
 
     suspend fun loadWallpaper() {
         val result: WallpaperList? = try {
-            apiService.getWallpaper()
+            apiService.getWallpaper(categories = "111")
         } catch (e: HttpException) {
             Log.d("expkx",e.toString())
             null

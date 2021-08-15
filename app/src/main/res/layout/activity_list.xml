@@ -38,9 +38,39 @@
         android:id="@+id/recyclerViewWallpapers"
         android:layout_width="406dp"
         android:layout_height="619dp"
-        android:layout_marginBottom="96dp"
+        android:layout_marginBottom="148dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintHorizontal_bias="0.538"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <CheckBox
+        android:id="@+id/genralCheck"
+        android:layout_width="111dp"
+        android:layout_height="46dp"
+        android:text="General"
+        app:layout_constraintBottom_toBottomOf="@+id/peopleCheck"
+        app:layout_constraintEnd_toStartOf="@+id/peopleCheck"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/peopleCheck" />
+
+    <CheckBox
+        android:id="@+id/animeCheck"
+        android:layout_width="111dp"
+        android:layout_height="46dp"
+        android:text="Anime"
+        app:layout_constraintBottom_toBottomOf="@+id/genralCheck"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/peopleCheck"
+        app:layout_constraintTop_toTopOf="@+id/peopleCheck" />
+
+    <CheckBox
+        android:id="@+id/peopleCheck"
+        android:layout_width="111dp"
+        android:layout_height="46dp"
+        android:text="People"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/searchText" />
 </androidx.constraintlayout.widget.ConstraintLayout>

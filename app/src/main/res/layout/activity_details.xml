@@ -9,20 +9,20 @@
 
     <ImageView
         android:id="@+id/imageDetail"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="396dp"
+        android:layout_height="399dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.666"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.035" />
+        app:layout_constraintVertical_bias="0.088" />
 
     <TextView
         android:id="@+id/textViewRes"
         android:layout_width="134dp"
         android:layout_height="43dp"
-        android:layout_marginEnd="104dp"
+        android:layout_marginEnd="84dp"
         android:layout_marginBottom="7dp"
         android:text="TextView"
         android:textColor="@color/black"
@@ -30,9 +30,10 @@
         android:textStyle="bold|italic"
         app:layout_constraintBottom_toBottomOf="@+id/editTextTextPersonName2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/editTextTextPersonName2" />
+        app:layout_constraintTop_toTopOf="@+id/editTextTextPersonName2"
+        app:layout_constraintVertical_bias="0.0" />
 
-    <EditText
+    <TextView
         android:id="@+id/editTextTextPersonName2"
         android:layout_width="109dp"
         android:layout_height="50dp"
@@ -42,12 +43,13 @@
         android:fontFamily="sans-serif-medium"
         android:inputType="textPersonName"
         android:text="Resolution:"
-        android:textColor="@color/purple_700"
+        android:textColor="@color/black"
         android:textColorHighlight="@color/purple_500"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName3"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <EditText
+    <TextView
         android:id="@+id/editTextTextPersonName3"
         android:layout_width="122dp"
         android:layout_height="57dp"
@@ -57,8 +59,9 @@
         android:fontFamily="sans-serif-medium"
         android:inputType="textPersonName"
         android:text="File Type"
-        android:textColor="@color/purple_700"
+        android:textColor="@color/black"
         android:textColorHighlight="@color/purple_500"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName4"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -76,7 +79,7 @@
         app:layout_constraintTop_toTopOf="@+id/editTextTextPersonName3"
         tools:ignore="MissingConstraints" />
 
-    <EditText
+    <TextView
         android:id="@+id/editTextTextPersonName4"
         android:layout_width="137dp"
         android:layout_height="46dp"
@@ -87,8 +90,9 @@
         android:fontFamily="sans-serif-medium"
         android:inputType="textPersonName"
         android:text="Source"
-        android:textColor="@color/purple_700"
+        android:textColor="@color/black"
         android:textColorHighlight="@color/purple_500"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -114,6 +118,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="28dp"
         android:text="Download"
+        android:background="@drawable/round"
         android:textColor="#000000"
         app:layout_constraintBottom_toTopOf="@+id/textViewRes"
         app:layout_constraintEnd_toEndOf="parent"
