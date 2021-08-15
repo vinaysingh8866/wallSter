@@ -43,7 +43,14 @@ class FavWallpaperHolder  private constructor(itemView: View): RecyclerView.View
             OnfavWallpaperClickListner.onFavClick(wallPaperInfo)
         }
 
+
+
+
     }
+
+
+
+
 
 }
 

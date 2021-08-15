@@ -12,7 +12,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
-        android:background="#BC1919"
+        android:background="#C51E1E"
         android:backgroundTint="#C51E1E"
         android:textColor="#000000"
         app:layout_constraintEnd_toEndOf="parent"

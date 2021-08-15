@@ -29,6 +29,7 @@ class ListActivity : AppCompatActivity() {
             intent.putExtra("type",it.file_type);
             intent.putExtra("source",it.source)
 
+
             startActivity(intent)
         })
 

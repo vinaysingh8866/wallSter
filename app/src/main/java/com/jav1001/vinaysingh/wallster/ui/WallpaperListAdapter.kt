@@ -49,9 +49,12 @@ class WallpaperListViewHolder private constructor(itemview: View): RecyclerView.
         //image2.setImageResource(R.drawable.flower)
         //Log.d("",wallpaper.path)
         textTest.text = wallpaper.id
+
         itemView.setOnClickListener{
             onWallpaperClickListner.onWallpaperClick(wallpaper)
         }
+
+
 
     }
 

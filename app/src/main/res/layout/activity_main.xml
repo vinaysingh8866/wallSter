@@ -211,13 +211,13 @@
     </Button>
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/button_food"
         android:layout_width="166dp"
         android:layout_height="45dp"
         android:layout_marginStart="4dp"
         android:layout_marginBottom="93dp"
         android:backgroundTint="@android:color/holo_green_dark"
-        android:text="More option"
+        android:text="Food"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
 
@@ -226,12 +226,12 @@
     </Button>
 
     <Button
-        android:id="@+id/button6"
+        android:id="@+id/button_drinks"
         android:layout_width="189dp"
         android:layout_height="34dp"
         android:layout_marginBottom="95dp"
         android:backgroundTint="@android:color/holo_green_dark"
-        android:text="More options"
+        android:text="Drinks"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.545"
@@ -270,7 +270,7 @@
         android:layout_marginBottom="2dp"
         android:backgroundTint="@android:color/holo_green_dark"
         android:text="Anime"
-        app:layout_constraintBottom_toTopOf="@+id/button2"
+        app:layout_constraintBottom_toTopOf="@+id/button_food"
         app:layout_constraintEnd_toStartOf="@+id/buttonLions"
         app:layout_constraintHorizontal_bias="0.483"
         app:layout_constraintStart_toStartOf="parent"
@@ -302,7 +302,7 @@
         android:layout_marginBottom="47dp"
         android:backgroundTint="@android:color/holo_green_dark"
         android:text="Planes"
-        app:layout_constraintBottom_toTopOf="@+id/button6"
+        app:layout_constraintBottom_toTopOf="@+id/button_drinks"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/buttonCars"
         app:layout_constraintTop_toTopOf="parent"
