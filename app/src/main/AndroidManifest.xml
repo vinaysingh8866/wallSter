@@ -3,6 +3,9 @@
     package="com.jav1001.vinaysingh.wallster">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
         android:name=".WallPaperApplication"
@@ -13,7 +16,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.WallSter">
         <activity android:name=".ui.DetailsActivity"></activity>
-        <activity android:name=".ui.FavoriteActivity" />
         <activity android:name=".ui.ListActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
