@@ -17,6 +17,6 @@ class DetailsActivity : AppCompatActivity() {
         setContentView(binding.root)
         Glide.with(this@DetailsActivity).load(intent.getStringExtra("url")).centerInside().into(binding.imageDetail)
         //binding.imageDetail.setImageResource(1)
-
     }
+
 }

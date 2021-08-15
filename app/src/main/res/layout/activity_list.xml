@@ -6,6 +6,34 @@
     android:layout_height="match_parent"
     tools:context=".ui.ListActivity">
 
+
+    <Button
+        android:id="@+id/buttonSearch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:background="#BC1919"
+        android:backgroundTint="#C51E1E"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/searchText"
+        app:layout_constraintTop_toTopOf="@+id/searchText"
+        tools:text="Search" />
+
+    <EditText
+        android:id="@+id/searchText"
+        android:layout_width="239dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:elevation="2dp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recyclerViewWallpapers"
+        app:layout_constraintVertical_bias="0.075" />
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerViewWallpapers"
         android:layout_width="409dp"
