@@ -27,6 +27,12 @@ class MainRepository(private val apiService: ApiService, private val wallpaperDa
 
     val favWallpaper:LiveData<List<LocalData>> = wallpaperDatabase.getWallpaperDao().getFavWallpaper()
 
+    suspend fun updateWallpaperInfo(wallPaperInfo: WallPaperInfo) {
+        withContext(Dispatchers.IO) {
+            wallpaperDatabase.getWallpaperDao().update(wallPaperInfo.toLocal())
+        }
+    }
+
 
 
     suspend fun loadWallpaper() {

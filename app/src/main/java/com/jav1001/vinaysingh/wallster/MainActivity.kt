@@ -37,6 +37,15 @@ class MainActivity : AppCompatActivity() {
             Log.d("test12",viewModel.wallPapers.value.toString())
         }
 
+        binding.bird.setOnClickListener{
+
+            val intent = Intent(this,  ListActivity::class.java).apply {
+
+            }
+            intent.putExtra("name", "Birds");
+            startActivity(intent)
+
+        }
         binding.buttonPenguin.setOnClickListener {
             val intent = Intent(this,  ListActivity::class.java).apply {
 
@@ -45,6 +54,14 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+
+        binding.buttonPlanes.setOnClickListener {
+            val intent = Intent(this,  ListActivity::class.java).apply {
+
+            }
+            intent.putExtra("name", "Plane");
+            startActivity(intent)
+        }
 
         binding.buttonCats.setOnClickListener {
             val intent = Intent(this,  ListActivity::class.java).apply {

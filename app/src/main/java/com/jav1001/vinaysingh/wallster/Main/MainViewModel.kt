@@ -4,6 +4,7 @@ import android.util.Log
 import androidx.lifecycle.*
 import com.jav1001.vinaysingh.wallster.data.MainRepository
 import com.jav1001.vinaysingh.wallster.data.WallPaperInfo
+import com.jav1001.vinaysingh.wallster.data.database.LocalData
 import kotlinx.coroutines.launch
 import java.lang.IllegalArgumentException
 
@@ -28,6 +29,7 @@ class MainViewModel (
                 repository.loadWallpaper()
             }
     }
+
 
 }
 

@@ -41,7 +41,7 @@ class WallpaperListViewHolder private constructor(itemview: View): RecyclerView.
 
     private val image1 = itemview.findViewById<ImageView>(R.id.imageViewR1)
     //private val image2 = itemview.findViewById<ImageView>(R.id.imageViewR2)
-    private val textTest = itemview.findViewById<TextView>(R.id.textTest)
+
 
     private val imageFav = itemview.findViewById<ImageView>(R.id.fave_icon)
     fun bind(wallpaper: WallPaperInfo, onWallpaperClickListner: OnWallpaperClickListner ){
@@ -57,13 +57,11 @@ class WallpaperListViewHolder private constructor(itemview: View): RecyclerView.
 //        imageFav.setOnClickListener {
 //            imageFav.setImageResource(R.drawable.ic_favorite)
 //        }
-        textTest.text = wallpaper.id
+        //extTest.text = wallpaper.id
 
         itemView.setOnClickListener{
             onWallpaperClickListner.onWallpaperClick(wallpaper)
         }
-
-
 
     }
 

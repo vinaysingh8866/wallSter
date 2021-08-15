@@ -34,7 +34,8 @@ data class WallPaperInfo(
     val file_type: String,
     val created_at: String,
     val path: String,
-    val thumbs:Thumbs
+    val thumbs:Thumbs,
+
 ){
     fun toLocal() :LocalData {
         return LocalData(

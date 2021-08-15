@@ -10,38 +10,12 @@
 
     <ImageView
         android:id="@+id/imageViewR1"
-        android:layout_width="160dp"
-        android:layout_height="160dp"
-        android:layout_marginTop="24dp"
+        android:layout_width="243dp"
+        android:layout_height="239dp"
 
-        app:layout_constraintHorizontal_bias="0.562"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-
-    <TextView
-        android:id="@+id/textTest"
-        android:layout_width="233dp"
-        android:layout_height="38dp"
-        android:layout_marginBottom="76dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.592"
-        app:layout_constraintStart_toEndOf="@+id/imageViewR1" />
-
-    <ImageView
-        android:id="@+id/fave_icon"
-        android:layout_width="62dp"
-        android:layout_height="59dp"
-        android:layout_marginEnd="96dp"
-        android:background="?attr/selectableItemBackgroundBorderless"
-        android:padding="10dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/imageViewR1"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.931"
-        tools:srcCompat="@drawable/ic_favorite_border" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

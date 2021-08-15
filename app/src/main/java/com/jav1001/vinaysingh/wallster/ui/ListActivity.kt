@@ -16,8 +16,6 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.jav1001.vinaysingh.wallster.R
 import com.jav1001.vinaysingh.wallster.WallPaperApplication
-import com.jav1001.vinaysingh.wallster.databinding.ActivityFavoriteBinding
-import com.jav1001.vinaysingh.wallster.databinding.ActivityListBinding
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -43,7 +41,6 @@ class ListActivity : AppCompatActivity() {
             intent.putExtra("type",it.file_type);
             intent.putExtra("source",it.source)
 
-
             startActivity(intent)
         })
 
@@ -57,7 +54,7 @@ class ListActivity : AppCompatActivity() {
             it.adapter = adapter
         }
 
-
+        findViewById<Button>(R.id.buttonSearch).text = "Search"
         findViewById<Button>(R.id.buttonSearch).setOnClickListener {
 
             lifecycleScope.launch{

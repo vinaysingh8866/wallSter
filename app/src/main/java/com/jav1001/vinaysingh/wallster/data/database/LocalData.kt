@@ -9,23 +9,23 @@ import com.jav1001.vinaysingh.wallster.data.WallPaperInfo
 class LocalData (
     @PrimaryKey
         val id: String,
-        val url: String,
-        val short_url: String,
-        val views: Int,
-        val favorites: Int,
-        val source: String,
-        val purity: String,
-        val category: String,
-        val dimension_x: Int,
-        val dimension_y: Int,
-        val resolution: String,
-        val ratio: String,
-        val file_size: String,
-        val file_type: String,
-        val created_at: String,
-        val path: String,
-        val thumbs:String,
-        val isfaved:Boolean=false
+    val url: String,
+    val short_url: String,
+    val views: Int,
+    val favorites: Int,
+    val source: String,
+    val purity: String,
+    val category: String,
+    val dimension_x: Int,
+    val dimension_y: Int,
+    val resolution: String,
+    val ratio: String,
+    val file_size: String,
+    val file_type: String,
+    val created_at: String,
+    val path: String,
+    val thumbs:String,
+    var isfaved:Boolean=false
 
 
     )
