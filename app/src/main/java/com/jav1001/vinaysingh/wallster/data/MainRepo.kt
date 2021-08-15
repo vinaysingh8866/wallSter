@@ -5,6 +5,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.map
 import com.jav1001.vinaysingh.wallster.ApiService
+import com.jav1001.vinaysingh.wallster.data.database.LocalData
 import com.jav1001.vinaysingh.wallster.data.database.WallpaperDatabase
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
@@ -24,9 +25,7 @@ class MainRepository(private val apiService: ApiService, private val wallpaperDa
         }
     }
 
-    val favWallpaper:LiveData<List<WallPaperInfo>> = wallpaperDatabase.getWallpaperDao().getFavWallpaper().map {
-        it.map { localData -> localData.toDamain() }
-    }
+    val favWallpaper:LiveData<List<LocalData>> = wallpaperDatabase.getWallpaperDao().getFavWallpaper()
 
 
 
@@ -45,6 +44,7 @@ class MainRepository(private val apiService: ApiService, private val wallpaperDa
         }
         result?.let {
             _wallpaperInfos.value = it.results
+
             withContext(Dispatchers.IO){
                 wallpaperDatabase.getWallpaperDao().insertAll (it.results.map { it.toLocal() })
             }

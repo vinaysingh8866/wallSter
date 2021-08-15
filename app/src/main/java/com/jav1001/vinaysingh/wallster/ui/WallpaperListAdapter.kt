@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import androidx.room.IMultiInstanceInvalidationCallback
 import com.bumptech.glide.Glide
 import com.jav1001.vinaysingh.wallster.R
 import com.jav1001.vinaysingh.wallster.data.WallPaperInfo
@@ -42,13 +43,22 @@ class WallpaperListViewHolder private constructor(itemview: View): RecyclerView.
     //private val image2 = itemview.findViewById<ImageView>(R.id.imageViewR2)
     private val textTest = itemview.findViewById<TextView>(R.id.textTest)
 
+    private val imageFav = itemview.findViewById<ImageView>(R.id.fave_icon)
     fun bind(wallpaper: WallPaperInfo, onWallpaperClickListner: OnWallpaperClickListner ){
 
+        val dd = wallpaper.toLocal()
         Glide.with(itemView).load(wallpaper.thumbs.small).centerInside().into(image1)
         //image1.setImageResource(R.drawable.bird)
         //image2.setImageResource(R.drawable.flower)
         //Log.d("",wallpaper.path)
+
+        //imageFav.setImageResource(R.drawable.ic_favorite_border)
+
+//        imageFav.setOnClickListener {
+//            imageFav.setImageResource(R.drawable.ic_favorite)
+//        }
         textTest.text = wallpaper.id
+
         itemView.setOnClickListener{
             onWallpaperClickListner.onWallpaperClick(wallpaper)
         }
