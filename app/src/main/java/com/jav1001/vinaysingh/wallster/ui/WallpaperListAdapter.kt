@@ -63,6 +63,8 @@ class WallpaperListViewHolder private constructor(itemview: View): RecyclerView.
             onWallpaperClickListner.onWallpaperClick(wallpaper)
         }
 
+
+
     }
 
 }
